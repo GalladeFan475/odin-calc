@@ -152,12 +152,12 @@ function display() {
 
   const plus = document.querySelector(".plus");
   plus.addEventListener("click", () => {
-    if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
+    if (display.textContent === ``) {
+    } else if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
       result = operate(num1, num2, operator);
       num1 = result;
       num2 = ``;
-      display.textContent = num1;
-      console.log(num1);
+      display.textContent = result;
       operator = `+`;
       operatorCount = 0;
     } else {
@@ -171,12 +171,12 @@ function display() {
 
   const minus = document.querySelector(".minus");
   minus.addEventListener("click", () => {
-    if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
+    if (display.textContent === ``) {
+    } else if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
       result = operate(num1, num2, operator);
       num1 = result;
       num2 = ``;
-      display.textContent = num1;
-      console.log(num1);
+      display.textContent = result;
       operator = `-`;
       operatorCount = 0;
     } else {
@@ -190,12 +190,12 @@ function display() {
 
   const multiply = document.querySelector(".multiply");
   multiply.addEventListener("click", () => {
-    if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
+    if (display.textContent === ``) {
+    } else if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
       result = operate(num1, num2, operator);
       num1 = result;
       num2 = ``;
-      display.textContent = num1;
-      console.log(num1);
+      display.textContent = result;
       operator = `*`;
       operatorCount = 0;
     } else {
@@ -209,12 +209,12 @@ function display() {
 
   const divide = document.querySelector(".divide");
   divide.addEventListener("click", () => {
-    if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
+    if (display.textContent === ``) {
+    } else if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
       result = operate(num1, num2, operator);
       num1 = result;
       num2 = ``;
-      display.textContent = num1;
-      console.log(num1);
+      display.textContent = result;
       operator = `/`;
       operatorCount = 0;
     } else {
@@ -241,6 +241,41 @@ function display() {
       operatorCount = 0;
       display.textContent = num1;
       console.log(num1);
+    }
+  });
+
+  const cancel = document.querySelector(".cancel");
+  cancel.addEventListener("click", () => {
+    num1 = ``;
+    num2 = ``;
+    result = ``;
+    operatorCount = 0;
+    display.textContent = ``;
+  });
+
+  const backspace = document.querySelector(".backspace");
+  backspace.addEventListener("click", () => {
+    if (num1 === ``) {
+    } else {
+      if (operatorCount === 0) {
+        if (num1.length <= 1) {
+          num1 = ``;
+          display.textContent = num1;
+        } else {
+          num1 = num1.substring(0, num1.length - 1);
+          display.textContent = num1;
+        }
+      } else {
+        if (num2 !== ``) {
+          if (num2.length <= 1) {
+            num2 = ``;
+            display.textContent = num2;
+          } else {
+            num2 = num2.substring(0, num2.length - 1);
+            display.textContent = num2;
+          }
+        }
+      }
     }
   });
 }
