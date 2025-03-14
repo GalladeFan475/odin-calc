@@ -149,6 +149,114 @@ function display() {
       display.textContent = num2;
     }
   });
+
+  const plus = document.querySelector(".plus");
+  plus.addEventListener("click", () => {
+    if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
+      result = operate(num1, num2, operator);
+      num1 = result;
+      num2 = ``;
+      display.textContent = num1;
+      console.log(num1);
+      operator = `+`;
+      operatorCount = 0;
+    } else {
+      result = display.textContent;
+      result = result + "+";
+      display.textContent = result;
+      operatorCount++;
+      operator = `+`;
+    }
+  });
+
+  const minus = document.querySelector(".minus");
+  minus.addEventListener("click", () => {
+    if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
+      result = operate(num1, num2, operator);
+      num1 = result;
+      num2 = ``;
+      display.textContent = num1;
+      console.log(num1);
+      operator = `-`;
+      operatorCount = 0;
+    } else {
+      result = display.textContent;
+      result = result + "-";
+      display.textContent = result;
+      operatorCount++;
+      operator = `-`;
+    }
+  });
+
+  const multiply = document.querySelector(".multiply");
+  multiply.addEventListener("click", () => {
+    if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
+      result = operate(num1, num2, operator);
+      num1 = result;
+      num2 = ``;
+      display.textContent = num1;
+      console.log(num1);
+      operator = `*`;
+      operatorCount = 0;
+    } else {
+      result = display.textContent;
+      result = result + "*";
+      display.textContent = result;
+      operatorCount++;
+      operator = `*`;
+    }
+  });
+
+  const divide = document.querySelector(".divide");
+  divide.addEventListener("click", () => {
+    if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
+      result = operate(num1, num2, operator);
+      num1 = result;
+      num2 = ``;
+      display.textContent = num1;
+      console.log(num1);
+      operator = `/`;
+      operatorCount = 0;
+    } else {
+      result = display.textContent;
+      result = result + "/";
+      display.textContent = result;
+      operatorCount++;
+      operator = `/`;
+    }
+  });
+
+  const equal = document.querySelector(".equal");
+  equal.addEventListener("click", () => {
+    if (num1 === `` || num2 === ``) {
+    } else if (operator === `/` && num2 === `0`) {
+      display.textContent = "bodoh";
+      num1 = ``;
+      num2 = ``;
+      operatorCount = 0;
+    } else {
+      result = operate(num1, num2, operator);
+      num1 = result;
+      num2 = ``;
+      operatorCount = 0;
+      display.textContent = num1;
+      console.log(num1);
+    }
+  });
+}
+
+function operate(num1, num2, operator) {
+  num1 = parseInt(num1);
+  num2 = parseInt(num2);
+  if (operator === `+`) {
+    return add(num1, num2);
+  } else if (operator === `-`) {
+    return subtract(num1, num2);
+  } else if (operator === `*`) {
+    return multiply(num1, num2);
+  } else if (operator === `/`) {
+    return divide(num1, num2);
+  }
 }
 
 display();
