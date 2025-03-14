@@ -16,10 +16,14 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-top: 135px;
+  padding: 20px 10px 20px 10px;
+  background-color: black;
 }
 
 .screen {
   display: flex;
+  justify-content: right;
+  align-items: center;
   flex: 1;
   border: solid;
   border-top-left-radius: 20px;
@@ -47,6 +51,9 @@ button {
   background-color: #ffc93c;
   color: black;
   font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .btn-rows-final {
@@ -69,4 +76,12 @@ button {
 
 button:hover {
   background-color: #ff9a3c;
+}
+
+.text {
+  font-size: 50px;
+  color: rgb(227, 227, 227);
+  text-align: right;
+  margin-right: 10px;
+  width: 400px;
 }
