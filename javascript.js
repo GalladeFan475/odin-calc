@@ -20,8 +20,7 @@ function display() {
   let operatorCount = 0;
   const display = document.querySelector(".text");
 
-  const one = document.querySelector(".one");
-  one.addEventListener("click", () => {
+  function clickOne() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -31,10 +30,11 @@ function display() {
       num2 = num2 + `1`;
       display.textContent = num2;
     }
-  });
+  }
+  const one = document.querySelector(".one");
+  one.addEventListener("click", clickOne);
 
-  const two = document.querySelector(".two");
-  two.addEventListener("click", () => {
+  function clickTwo() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -44,10 +44,11 @@ function display() {
       num2 = num2 + `2`;
       display.textContent = num2;
     }
-  });
+  }
+  const two = document.querySelector(".two");
+  two.addEventListener("click", clickTwo);
 
-  const three = document.querySelector(".three");
-  three.addEventListener("click", () => {
+  function clickThree() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -57,10 +58,11 @@ function display() {
       num2 = num2 + `3`;
       display.textContent = num2;
     }
-  });
+  }
+  const three = document.querySelector(".three");
+  three.addEventListener("click", clickThree);
 
-  const four = document.querySelector(".four");
-  four.addEventListener("click", () => {
+  function clickFour() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -70,10 +72,11 @@ function display() {
       num2 = num2 + `4`;
       display.textContent = num2;
     }
-  });
+  }
+  const four = document.querySelector(".four");
+  four.addEventListener("click", clickFour);
 
-  const five = document.querySelector(".five");
-  five.addEventListener("click", () => {
+  function clickFive() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -83,10 +86,11 @@ function display() {
       num2 = num2 + `5`;
       display.textContent = num2;
     }
-  });
+  }
+  const five = document.querySelector(".five");
+  five.addEventListener("click", clickFive);
 
-  const six = document.querySelector(".six");
-  six.addEventListener("click", () => {
+  function clickSix() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -96,10 +100,11 @@ function display() {
       num2 = num2 + `6`;
       display.textContent = num2;
     }
-  });
+  }
+  const six = document.querySelector(".six");
+  six.addEventListener("click", clickSix);
 
-  const seven = document.querySelector(".seven");
-  seven.addEventListener("click", () => {
+  function clickSeven() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -109,10 +114,11 @@ function display() {
       num2 = num2 + `7`;
       display.textContent = num2;
     }
-  });
+  }
+  const seven = document.querySelector(".seven");
+  seven.addEventListener("click", clickSeven);
 
-  const eight = document.querySelector(".eight");
-  eight.addEventListener("click", () => {
+  function clickEight() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -122,10 +128,11 @@ function display() {
       num2 = num2 + `8`;
       display.textContent = num2;
     }
-  });
+  }
+  const eight = document.querySelector(".eight");
+  eight.addEventListener("click", clickEight);
 
-  const nine = document.querySelector(".nine");
-  nine.addEventListener("click", () => {
+  function clickNine() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -135,10 +142,11 @@ function display() {
       num2 = num2 + `9`;
       display.textContent = num2;
     }
-  });
+  }
+  const nine = document.querySelector(".nine");
+  nine.addEventListener("click", clickNine);
 
-  const zero = document.querySelector(".zero");
-  zero.addEventListener("click", () => {
+  function clickZero() {
     if (operatorCount == 0) {
       //No operators pressed
       num2 = ``;
@@ -148,7 +156,9 @@ function display() {
       num2 = num2 + `0`;
       display.textContent = num2;
     }
-  });
+  }
+  const zero = document.querySelector(".zero");
+  zero.addEventListener("click", clickZero);
 
   const plus = document.querySelector(".plus");
   plus.addEventListener("click", () => {
@@ -278,6 +288,44 @@ function display() {
       }
     }
   });
+
+  document.addEventListener("keydown", logKey);
+  function logKey(e) {
+    switch (e.key) {
+      case `1`:
+        clickOne();
+        break;
+      case `2`:
+        clickTwo();
+        break;
+      case `3`:
+        clickThree();
+        break;
+      case `4`:
+        clickFour();
+        break;
+      case `5`:
+        clickFive();
+        break;
+      case `6`:
+        clickSix();
+        break;
+      case `7`:
+        clickSeven();
+        break;
+      case `8`:
+        clickEight();
+        break;
+      case `9`:
+        clickNine();
+        break;
+      case `0`:
+        clickZero();
+        break;
+      default:
+        console.log("other key pressed");
+    }
+  }
 }
 
 function operate(num1, num2, operator) {
