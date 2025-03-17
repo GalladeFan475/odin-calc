@@ -71,6 +71,9 @@ function display() {
   const backspace = document.querySelector(".backspace");
   backspace.addEventListener("click", clickBack);
 
+  const decimal = document.querySelector(".decimal");
+  decimal.addEventListener("click", clickDecimal);
+
   function clickOne() {
     if (operatorCount === 0) {
       if (num1 === result) {
@@ -362,6 +365,42 @@ function display() {
     }
   }
 
+  function clickDecimal() {
+    if (operatorCount === 0) {
+      if (num1 === result) {
+        if (num2.indexOf(".") === -1) {
+          // Checks if num2 already has a decimal
+          if (num2 === "") {
+            num2 = "0.";
+          } else {
+            num2 += ".";
+          }
+          screen.textContent = num2;
+        }
+      } else {
+        if (num1.indexOf(".") === -1) {
+          // Checks if num1 already has a decimal
+          if (num1 === "") {
+            num1 = "0.";
+          } else {
+            num1 += ".";
+          }
+          screen.textContent = num1;
+        }
+      }
+    } else {
+      if (num2.indexOf(".") === -1) {
+        // Checks if num2 already has a decimal
+        if (num2 === "") {
+          num2 = "0.";
+        } else {
+          num2 += ".";
+        }
+        screen.textContent = num2;
+      }
+    }
+  }
+
   document.addEventListener("keydown", logKey);
   function logKey(e) {
     switch (e.key) {
@@ -416,6 +455,9 @@ function display() {
       case `Backspace`:
         clickBack();
         break;
+      case `.`:
+        clickDecimal();
+        break;
       default:
         console.log("other key pressed");
     }
@@ -423,6 +465,14 @@ function display() {
 }
 
 function operate(num1, num2, operator) {
+  num1 = String(num1);
+  num2 = String(num2);
+  if (
+    num1.indexOf(".") === num1.length - 1 ||
+    num2.indexOf(".") === num2.length - 1
+  ) {
+    return "ERROR";
+  }
   num1 = parseFloat(num1);
   num2 = parseFloat(num2);
   if (operator === `+`) {

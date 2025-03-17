@@ -300,3 +300,82 @@ case `+`:
   case `Backspace`:
   clickBack();
   break;
+
+  function clickDecimal(){
+    if(operator === 0){
+      if(num1 === result){
+        if(num2.includes(`.`)){}
+        else{
+          num2 += `.`
+          screen.textContent = num2;
+        }
+      }
+      else{
+        if(num1.includes(`.`)){}
+        else{
+        num1 += `.`;
+        screen.textContent = num1;
+        }
+      }
+    }
+    else{
+      if(num.includes(`.`)){}
+      else{
+        num2 += `.`;
+        screen.textContent = num1;
+      }
+    }
+  }
+
+  function clickOne() {
+    if (operatorCount === 0) {
+      if (num1 === result) {
+        num2 += `1`;
+        screen.textContent = num2;
+      } else {
+        num1 += `1`;
+        screen.textContent = num1;
+      }
+    } else {
+      screen.textContent = ``;
+      num2 = num2 + `1`;
+      screen.textContent = num2;
+    }
+  }
+
+  function clickDecimal() {
+    if (operatorCount === 0) {
+      if(num1 === result){
+        if (num2.indexOf(".") === -1) {
+          // Checks if num2 already has a decimal
+          if (num2 === "") {
+            num2 = "0.";
+          } else {
+            num2 += ".";
+          }
+          screen.textContent = num2;
+        }
+      }
+      else{
+      if (num1.indexOf(".") === -1) {
+        // Checks if num1 already has a decimal
+        if (num1 === "") {
+          num1 = "0.";
+        } else {
+          num1 += ".";
+        }
+        screen.textContent = num1;
+      }
+    }
+    } else {
+      if (num2.indexOf(".") === -1) {
+        // Checks if num2 already has a decimal
+        if (num2 === "") {
+          num2 = "0.";
+        } else {
+          num2 += ".";
+        }
+        screen.textContent = num2;
+      }
+    }
+  }
