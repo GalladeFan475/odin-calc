@@ -77,160 +77,250 @@ function display() {
   function clickOne() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `1`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `1`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `1`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickTwo() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `2`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `2`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `2`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickThree() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `3`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `3`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `3`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickFour() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `4`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `4`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `4`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickFive() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `5`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `5`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `5`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickSix() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `6`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `6`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `6`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickSeven() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `7`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `7`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `7`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickEight() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `8`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `8`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `8`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickNine() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `9`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `9`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `9`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
   function clickZero() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         num2 += `0`;
+        num2 = parseFloat(num2);
         screen.textContent = num2;
+        console.log(`num1: ${num1} num2: ${num2}`);
       } else {
+        num1 = String(num1);
         num1 += `0`;
+        num1 = parseFloat(num1);
         screen.textContent = num1;
+        console.log(`num1: ${num1} num2: ${num2}`);
       }
     } else {
       screen.textContent = ``;
+      num2 = String(num2);
       num2 = num2 + `0`;
+      num2 = parseFloat(num2);
       screen.textContent = num2;
+      console.log(`num1: ${num1} num2: ${num2}`);
     }
   }
 
@@ -238,6 +328,7 @@ function display() {
     if (screen.textContent === ``) {
     } else if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
       result = operate(num1, num2, operator);
+      console.log(`Results: ${result}`);
       num1 = result;
       num2 = ``;
       screen.textContent = result;
@@ -245,7 +336,7 @@ function display() {
       operatorCount = 0;
     } else {
       result = screen.textContent;
-      result = result + "+";
+      result = result + " +";
       screen.textContent = result;
       operatorCount++;
       operator = `+`;
@@ -256,6 +347,7 @@ function display() {
     if (screen.textContent === ``) {
     } else if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
       result = operate(num1, num2, operator);
+      console.log(`Results: ${result}`);
       num1 = result;
       num2 = ``;
       screen.textContent = result;
@@ -263,7 +355,7 @@ function display() {
       operatorCount = 0;
     } else {
       result = screen.textContent;
-      result = result + "-";
+      result = result + " -";
       screen.textContent = result;
       operatorCount++;
       operator = `-`;
@@ -274,6 +366,7 @@ function display() {
     if (screen.textContent === ``) {
     } else if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
       result = operate(num1, num2, operator);
+      console.log(`Results: ${result}`);
       num1 = result;
       num2 = ``;
       screen.textContent = result;
@@ -281,7 +374,7 @@ function display() {
       operatorCount = 0;
     } else {
       result = screen.textContent;
-      result = result + "*";
+      result = result + " *";
       screen.textContent = result;
       operatorCount++;
       operator = `*`;
@@ -292,6 +385,7 @@ function display() {
     if (screen.textContent === ``) {
     } else if (operatorCount == 1 && num1 !== `` && num2 !== ``) {
       result = operate(num1, num2, operator);
+      console.log(`Results: ${result}`);
       num1 = result;
       num2 = ``;
       screen.textContent = result;
@@ -299,7 +393,7 @@ function display() {
       operatorCount = 0;
     } else {
       result = screen.textContent;
-      result = result + "/";
+      result = result + " /";
       screen.textContent = result;
       operatorCount++;
       operator = `/`;
@@ -315,6 +409,7 @@ function display() {
       operatorCount = 0;
     } else {
       result = operate(num1, num2, operator);
+      console.log(`Results: ${result}`);
       num1 = result;
       num2 = ``;
       operatorCount = 0;
@@ -368,6 +463,7 @@ function display() {
   function clickDecimal() {
     if (operatorCount === 0) {
       if (num1 === result) {
+        num2 = String(num2);
         if (num2.indexOf(".") === -1) {
           // Checks if num2 already has a decimal
           if (num2 === "") {
@@ -378,6 +474,7 @@ function display() {
           screen.textContent = num2;
         }
       } else {
+        num1 = String(num1);
         if (num1.indexOf(".") === -1) {
           // Checks if num1 already has a decimal
           if (num1 === "") {
@@ -389,6 +486,7 @@ function display() {
         }
       }
     } else {
+      num2 = String(num2);
       if (num2.indexOf(".") === -1) {
         // Checks if num2 already has a decimal
         if (num2 === "") {
@@ -476,13 +574,17 @@ function operate(num1, num2, operator) {
   num1 = parseFloat(num1);
   num2 = parseFloat(num2);
   if (operator === `+`) {
-    return add(num1, num2);
+    result = add(num1, num2);
+    return result;
   } else if (operator === `-`) {
-    return subtract(num1, num2);
+    result = subtract(num1, num2);
+    return result;
   } else if (operator === `*`) {
-    return multiply(num1, num2);
+    result = multiply(num1, num2);
+    return result.toFixed(2);
   } else if (operator === `/`) {
-    return divide(num1, num2);
+    result = divide(num1, num2);
+    return result.toFixed(2);
   }
 }
 
